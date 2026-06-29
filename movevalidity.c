@@ -212,7 +212,7 @@ int bishop_check(int x1, int y1, int x2, int y2) {
     for (dist = 2*abs(x2-x1); dist>0;dist-=2) {
         //the for loop could be reduced, but symbolically represents both the Manhattan (|x|+|y|) distance
         if (board[x1+sign(x2-x1)*(dist/2)][y1+sign(y2-y1)*(dist/2)]!='x') {
-            printf("%d\n",x1+sign(x2-x1)*dist);
+            printf("%d\n",x1+sign(x2-x1)*(dist/2));
             return 0;
         }
     }
