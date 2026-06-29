@@ -40,6 +40,8 @@ int castling(int k_rook, int q_rook, int side) {
         if (k_rook) {return 0;}
         if (turn==WHITE && board[7][8]!='x' && board[6][8]!='x'){return 0;}
         if (turn==BLACK && board[7][1]!='x' && board[6][1]!='x'){return 0;}
+        if (!safe_square(7,8,WHITE)||!safe_square(6,8,WHITE)||!safe_square(5,8,WHITE)){return 0;}
+        if (!safe_square(7,1,BLACK)||!safe_square(6,1,BLACK)||!safe_square(5,1,BLACK)){return 0;}
     }
     if (side==CASTLING_QUEEN) {
         if (q_rook){return 0;}
