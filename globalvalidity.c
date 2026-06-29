@@ -74,7 +74,6 @@ int* scan_board(char piece) {
     return coordinates;
 }
 int safe_square(int x1, int y1, int color) {
-    //note start finishing castling
     if (color == WHITE) {
         //Pawn check is special
         int* pawns = scan_board('p');
