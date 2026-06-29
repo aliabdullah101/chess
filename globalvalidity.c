@@ -47,6 +47,8 @@ int castling(int k_rook, int q_rook, int side) {
         if (q_rook){return 0;}
         if (turn==WHITE && board[2][8]!='x' && board[3][8]!='x' && board[4][8]!='x'){return 0;}
         if (turn==BLACK && board[2][1]!='x' && board[3][1]!='x' && board[4][1]!='x'){return 0;}
+        if (!safe_square(2,8,WHITE)||!safe_square(3,8,WHITE)||!safe_square(4,8,WHITE)||!safe_square(5,8,WHITE)){return 0;}
+        if (!safe_square(2,1,BLACK)||!safe_square(3,1,BLACK)||!safe_square(4,1,BLACK)||!safe_square(5,1,BLACK)){return 0;}
     }
     printf("1\n");
     return 1;
